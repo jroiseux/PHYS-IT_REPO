@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Diagnosis</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+      
+      html {
+          width: 100%;
+          height: 100%;
+      }
+      body {
+          background-color: grey;
+          width: 100%;
+          height: 100%;
+      }
+      
+      #menu {
+          background-color: red;
+          height: 10%;
+      }
+      #back {
+          background-color: aqua;
+          width: 70%;
+          height: 50%;
+          font-size: 18pt;
+      }
+      
+      #print {
+          background-color: aqua;
+          width: 15%;
+          height: 50%;
+          float: right;
+          margin-top: -3em;
+          text-align: center;
+          display: inline;
+      }
+      
+      #print button {
+          margin-top: 0.25em;
+          font-size: 20pt;
+      }
+      
+      #patientPage {
+          width: 50%;
+          height:90%;
+          background-color: yellow;
+          text-align: center;
+          float: left;
+      }
+      
+      #patientPic {
+          font-size: 15pt;
+      }
+      
+      #textPrompts {
+          width: 50%;
+          height: 90%;
+          float: right;
+          background-color: antiquewhite;
+          display: grid;
+          align-content: center;
+      }
+      
+      #diagnosis {
+          text-align: center;
+      }
+      
+      #diagnosis h2 {
+          margin-left: -12em;
+          font-size: 20pt;
+      }
+      
+      #diagnosis textarea {
+          font-size: 12pt;
+      }
+      
+      #treatment {
+          text-align: center;
+      }
+      
+      #treatment h2 {
+          margin-left: -11.6em;
+          font-size: 20pt;
+      }
+      
+      #treatment p {
+          text-decoration: underline;
+          margin-left: -20.6em;
+          font-size: 13pt;
+      }
+      
+      #treatment textarea {
+          font-size: 12pt;
+      }
+      
+      #exercise {
+          text-align: center;
+      }
+      
+      #exercise p {
+          text-decoration: underline;
+          margin-left: -20em;
+          font-size: 13pt;
+      }
+      
+      #exercise textarea {
+          font-size: 12pt;
+      }
+    
+</style>
+</head>
+
+<body>
+    <div id="menu">
+        <div id="back">
+            <a href="patientprofile.html">
+                <p>← Back to Patient Profile</p>
+            </a>
+        </div>
+        <div id="print">
+            <button type="button">Print</button>
+        </div>
+    </div>
+    
+    <div id="patientPage">
+        <div id = "patientPic">
+            <h1>FirstName LastName</h1>
+            <img src = "https://dummyimage.com/500x600/000/fff">
+        </div>       
+    </div>
+    
+    <div id = "textPrompts">   
+      
+      <div id="diagnosis">
+    <h2>Diagnosis</h2>
+    <textarea rows="10" cols="50"> </textarea>
+      </div>
+   
+      <div id="treatment">
+      <h2>Treatment</h2>
+          <p>In-Clinic</p>
+      <textarea rows="10" cols="50"> </textarea>
+      </div>
+        
+        <div id="exercise">
+      <p>Treatment</p>
+      <textarea rows="10" cols="50"> </textarea>
+      </div>
+            
+        </div>
+
+</body>
+
+</html>
