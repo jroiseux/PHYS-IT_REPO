@@ -45,57 +45,66 @@
     </div>
   </div>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <script>
-      var physioUID;
-      
-      firebase.auth().onAuthStateChanged(function(user) {
-      if (user) {
-    // User is signed in.
-            physioUID = user.uid;
-            } else {
-    // No user is signed in.
+  var physioUID;
+
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      // User is signed in.
+      physioUID = user.uid;
+      var id = physioUID
+    } else {
+      // No user is signed in.
       alert("nope");
-  }
-          if (physioUID) {
-  
-            alert("[will remove] yourID: " + physioUID);
-            } else {
+    }
+    if (physioUID) {
+
+      alert("[will remove] yourID: " + physioUID);
+    } else {
       alert("nope");
-  }
-});
-    
-      //var name, email;
-      if (user != null) {
+    }
+
+
+    //var name, email;
+    if (user != null) {
       name = user.displayName;
       email = user.email;
       photoUrl = user.photoURL;
       emailVerified = user.emailVerified;
-      uid = user.uid;  
-      }
-      var database = firebase.database();
-      var patientList = firebase.database().ref().child('Patients');
-      var count = 0;
-      patientList.on('value', function(snap){
-          if(snap.exists()){
+      uid = user.uid;
+    }
+
+    var ref = firebase.database().ref("Users/" + physioUID);
+    ref.on(
+      "value",
+      function(snap) {
+
+        snap.forEach(function(snapshot){
+          var patientid = snapshot.key;
+          console.log(patientid)
+          var patientref = firebase.database().ref("Patients/" + patientid);
+          patientref.on(
+            "value",
+            function(snap) {
+              console.log(JSON.stringify(snap.val().FirstName));
+              localStorage.setItem('ID', patientid);
               var content = '';
-              snap.forEach(function(childNodes) {
-                count++;
-                var firstName = childNodes.val().FirstName;
-                var lastName = childNodes.val().LastName;
-                var phoneNumber = childNodes.val().PhoneNumber;
-                var appointmentTime = childNodes.val().AppointmentTime;
-                  content +='<tr>';
-                  content += '<td>' + firstName + '</td>';
-                  content += '<td>' + lastName + '</td>';
-                  content += '<td>' + phoneNumber + '</td>';
-                  content += '<td>' + appointmentTime + '</td>';
-                  content += '<td><button><a href="patientprofile.html?patient='+ count +'">View</a></button></td>';
-                  content += '</tr>';
-              });
+              content +='<tr>';
+              content += '<td>' + snap.val().FirstName +'</td>';
+              content += '<td>' + snap.val().LastName + '</td>';
+              content += '<td>' + snap.val().PhoneNumber + '</td>';
+              content += '<td>' + snap.val().AppointmentTime + '</td>';
+              content += '<td><button><a href="patientprofile.html">View</a></button></td>';
+              content += '</tr>';
               $('#patients').append(content);
-          }
+            });
+
+            
+          });
+        });
+
       });
-  </script>
-</body>
-</html>
+      </script>
+    </body>
+    </html>
