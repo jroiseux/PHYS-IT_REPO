@@ -24,21 +24,9 @@
 
 <body>
 
-<<<<<<< HEAD
-    <form action="patientlist.html">
-        <fieldset>
-            <legend>PHYS-IT</legend>
-            <input type="text" id="name" name="name" placeholder="Username" autofocus="autofocus" required="required">
-            <input type="password" id="pwd" name="pwd" placeholder="Password" required="required">
-            <br><br>
-            <a href="patientprofile.html"><input type="submit" id="submit" name="submit" value="Submit"></a>
-            <input type="reset" id="reset" name="reset" value="Reset">
-        </fieldset>
-    </form>
     <br>
     <br>
     <hr>
-=======
 
   
   <script>
@@ -54,12 +42,17 @@
   <div id="loader">Loading the login screen...</div>
 
   <script>
+  
+
+     
   var uiConfig = {
     callbacks: {
+    
       signInSuccessWithAuthResult: function(authResult, redirectUrl) {
         // User successfully signed in.
         // Return type determines whether we continue the redirect automatically
         // or whether we leave that to developer to handle.
+        
         return true;
       },
       uiShown: function() {
@@ -81,15 +74,9 @@
     // Privacy policy url.
     privacyPolicyUrl: ''
   };
-
-
   //The start method will wait until the DOM is loaded.
-
   ui.start('#firebaseui-auth-container', uiConfig);
   </script>
->>>>>>> d5eb34d19fd610c506eae2ad3630a4f976217db6
-
-
 
 </body>
 

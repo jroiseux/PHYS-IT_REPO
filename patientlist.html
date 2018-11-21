@@ -47,6 +47,32 @@
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <script>
+      var physioUID;
+      
+      firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+    // User is signed in.
+            physioUID = user.uid;
+            } else {
+    // No user is signed in.
+      alert("nope");
+  }
+          if (physioUID) {
+  
+            alert("[will remove] yourID: " + physioUID);
+            } else {
+      alert("nope");
+  }
+});
+    
+      //var name, email;
+      if (user != null) {
+      name = user.displayName;
+      email = user.email;
+      photoUrl = user.photoURL;
+      emailVerified = user.emailVerified;
+      uid = user.uid;  
+      }
       var database = firebase.database();
       var patientList = firebase.database().ref().child('Patients');
       var count = 0;
