@@ -253,7 +253,7 @@
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script>
-    var patientid = localStorage.getItem('ID');
+    var patientid = sessionStorage.getItem('patientid');
     var patientList = firebase.database().ref("Patients/" + patientid);
 
     patientList.on('value', function(snap) {
