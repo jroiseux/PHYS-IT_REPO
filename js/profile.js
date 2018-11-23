@@ -1,5 +1,5 @@
 //patientprofile
-var patientid = sessionStorage.getItem('patientid');
+var patientid = localStorage.getItem('patientid');
 var patientList = firebase.database().ref("Patients/" + patientid);
 
 patientList.on('value', function(snap) {

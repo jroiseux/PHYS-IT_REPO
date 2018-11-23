@@ -43,7 +43,7 @@ firebase.auth().onAuthStateChanged(function(user) {
             content += '<td>' + snap.val().PhoneNumber + '</td>';
             content += '<td>' + snap.val().AppointmentTime + '</td>';
             content += '<td><button><a href="patientprofile.html"'
-            + 'onclick="sessionStorage.setItem(\'patientid\', \'' + patientid + '\');">'
+            + 'onclick="localStorage.setItem(\'patientid\', \'' + patientid + '\');">'
             + 'View</a></button></td>';
             content += '</tr>';
             $('#patients').append(content);
