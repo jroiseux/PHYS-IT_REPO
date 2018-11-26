@@ -179,7 +179,7 @@
     <div id="diagnosisPopup">
       <textarea rows="32" cols="90" id="Diagnosis"></textarea>
       <button class="saveButton"
-        onclick="$('#diagnosisPopup').css('display', 'none'); saveText('Diagnosis')">Save</button>
+        onclick="$('#diagnosisPopup').css('display', 'none'); saveMedicalInfo('Diagnosis')">Save</button>
     </div>
   </div>
 
@@ -196,7 +196,7 @@
     <div id="exercisesPopup">
       <textarea rows="32" cols="90" id="Exercises"></textarea>
       <button class="saveButton"
-        onclick="$('#exercisesPopup').css('display', 'none'); saveText('Exercises')">Save</button>
+        onclick="$('#exercisesPopup').css('display', 'none'); saveExercise($('#Exercises').val())">Save</button>
     </div>
 
   </div>

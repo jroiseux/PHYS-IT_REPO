@@ -17,7 +17,7 @@ function displayText(key, textareaid) {
   });
 }
 
-function saveText(key) {
+function saveMedicalInfo(key) {
   var text = $('#' + key).val();
   firebase.database()
     .ref("Patients/" + patientid + "/MedicalInfo")
@@ -25,3 +25,22 @@ function saveText(key) {
       [key]: text
     });
 };
+
+function saveExercise(text) {
+  var newPostKey = firebase.database().ref().child("Patients/" + patientid + "/MedicalInfo/Exercises").push().key;
+  var updates = {};
+  updates["Patients/" + patientid + "/MedicalInfo/Exercises/" + newPostKey] = {'exercise': text};
+  firebase.database().ref().update(updates);
+
+};
+
+function displayExercises(textareaid) {
+  firebase.database()
+    .ref("Patients/" + patientid + "/MedicalInfo/Exercises/")
+    .on('value', function(snap) {
+          exercises = snap.val();
+          snap.forEach(function(e){
+            $('#' + textareaid).append(e.val().exercise + "\n");
+          });
+    });
+}

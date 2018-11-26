@@ -11,6 +11,7 @@ patientList.on('value', function(snap) {
 $(document).ready(function() {
   displayText('Diagnosis', 'diagnosisTextarea');
   displayText('Diagnosis', 'Diagnosis');
-  displayText('Exercises', 'exercisesTextarea');
-  displayText('Exercises', 'Exercises');
+  //displayText('Exercises', 'exercisesTextarea');
+  //displayText('Exercises', 'Exercises');
+  displayExercises('exercisesTextarea');
 });
