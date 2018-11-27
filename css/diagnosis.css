@@ -11,21 +11,23 @@
 
       #menu {
           background-color: red;
-          height: 10%;
+          height: 6em;
+          width: 100%;
       }
+
       #back {
           background-color: aqua;
           width: 70%;
-          height: 50%;
+          height: 3em;
           font-size: 18pt;
       }
 
       #print {
           background-color: aqua;
           width: 15%;
-          height: 50%;
+          height: 3em;
           float: right;
-          margin-top: -3em;
+          margin-top: -4.5em;
           text-align: center;
           display: inline;
       }
@@ -37,7 +39,7 @@
 
       #patientPage {
           width: 50%;
-          height:90%;
+          height: 50em;
           background-color: yellow;
           text-align: center;
           float: left;
@@ -47,11 +49,17 @@
           font-size: 15pt;
       }
 
+#patientPic img {
+    width: 60%;
+    height: 600px;
+}
+
       #textPrompts {
         width: 100%;
-        height: 40%;
+        height: 18em;
         background-color: blue;
         text-align: center;
+        margin-top: 4em;
       }
 
       #textPrompts2 {
