@@ -1,45 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title></title>
-    <meta charset="utf-8"/>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
 
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyBHkznc6I46EAtk3L8bKm3h3t2Yx9NUyZI",
-    authDomain: "phys-it.firebaseapp.com",
-    databaseURL: "https://phys-it.firebaseio.com",
-    projectId: "phys-it",
-    storageBucket: "phys-it.appspot.com",
-    messagingSenderId: "960737516865"
-  };
-  firebase.initializeApp(config);
-    
-</script>
+<head>
+    <title>Patient Profile</title>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBHkznc6I46EAtk3L8bKm3h3t2Yx9NUyZI",
+            authDomain: "phys-it.firebaseapp.com",
+            databaseURL: "https://phys-it.firebaseio.com",
+            projectId: "phys-it",
+            storageBucket: "phys-it.appspot.com",
+            messagingSenderId: "960737516865"
+        };
+        firebase.initializeApp(config);
+    </script>
     <style>
-      @import url(https://fonts.googleapis.com/css?family=Hind);
-        
+        @import url(https://fonts.googleapis.com/css?family=Hind);
+
         html {
             width: 100%;
             height: 100%;
         }
-        
+
         body {
-        font-family: 'Hind', sans-serif;
-          width: 100%;
-          height: 100%;
-      }
-        
+            font-family: 'Hind', sans-serif;
+            width: 100%;
+            height: 100%;
+        }
+
         #leftside {
             float: left;
             width: 50%;
             height: 100%;
         }
-        
-       #patientinfo {
+
+        #patientinfo {
             width: 100%;
             height: 10%;
             background-color: red;
@@ -47,11 +47,13 @@
             align-content: center;
             text-align: center;
         }
-        
+
         #patientinfo h1 {
             font-size: 35pt;
+            width: 100%;
+            height: 100%;
         }
-        
+
         #rightside {
             width: 50%;
             height: 90%;
@@ -59,196 +61,223 @@
             float: right;
 
         }
-        
+
         #info {
             width: 100%;
             height: 30%;
             background-color: pink;
             text-align: left;
         }
-        
+
         #info h2 {
             margin-left: 8.6em;
         }
-        
+
         #info h4 {
             margin-left: 13em;
         }
-    
+
         #pic {
-            width: 100%;
+            width: 90%;
             height: 90%;
             background-color: aqua;
             align-content: center;
             position: relative;
+            display: grid;
         }
-        
+
         #pic img {
-            width: 90%;
-            height: 90%;
+            max-width: 100%;
+            height: auto;
             margin-top: 2em;
             margin-left: 2em;
             display: block;
         }
-        
+
         #textPrompts {
             width: 100%;
             height: 40%;
             background-color: blue;
             text-align: center;
         }
-        
+
         #textPrompts2 {
             width: 100%;
             height: 30%;
             text-align: center;
             margin-top: -1em;
         }
-        
+
         #other h3 {
             margin-left: -11.5em;
             font-size: 18pt;
         }
-        
+
         #symptoms h3 {
             margin-left: -13.4em;
             font-size: 18pt;
         }
-        
-        #symptoms textarea{
+
+        #symptoms textarea {
             font-size: 12pt;
         }
-        
+
         textarea {
             font-size: 12pt;
         }
-            
-        #pic{
-        }
-        #bigPopup{
-            display: grid; 
+
+        #bigPopup {
+            display: grid;
             text-align: center;
-            
+
         }
-        
-        #symptomPopup{
-            display: none; 
-            /*position: fixed;*/ 
+
+        #symptomPopup {
+            display: none;
+            /*position: fixed;*/
             z-index: 1;
             margin-top: -15em;
             margin-left: -30em;
         }
-        
+
         #symptomPopup textarea {
             position: absolute;
             margin-left: -39em;
             margin-top: -10em;
             border: solid 5px black;
         }
-        
+
         #otherPopup textarea {
             position: absolute;
             margin-left: -54em;
             margin-top: -31.35em;
-            border: solid 5px black;   
-        }
-        
-        #symptomButton{
-            height: 4em;
-            width: 10.8em;
-            
+            border: solid 5px black;
         }
 
-        .button{
+        #symptomButton {
             height: 4em;
-            
+            width: 10.8em;
+
         }
-        
-        .saveButton{
-            height: 2em; 
-            width: 500px; 
+
+        .button {
+            height: 4em;
+
+        }
+
+        .saveButton {
+            height: 2em;
+            width: 500px;
             align-content: center;
             margin-top: 35em;
             margin-left: 14em;
-            display: grid; 
+            display: grid;
             position: absolute;
             height: 3em;
         }
-        
-        #otherFindingsSaveButton{
-            height: 2em; 
-            width: 500px; 
+
+        #otherFindingsSaveButton {
+            height: 2em;
+            width: 500px;
             align-content: center;
             margin-top: 3.9em;
             margin-left: -29.6em;
-            display: grid; 
+            display: grid;
             position: absolute;
             height: 3em;
         }
-        
-        #otherPopup{
-            display: none; 
+
+        #otherPopup {
+            display: none;
             z-index: 1;
             margin-top: -15em;
         }
-    
+        
+        @media screen and (max-width: 1600px) {
+            #info h4 {
+                margin-left: 10.7em;
+            }
+        }
+        
+        @media screen and (max-width: 1500px) {
+            #info h4 {
+                margin-left: 8.9em;
+            }
+        }
+        
+        @media screen and (max-width: 1400px) {
+            #info h4 {
+                margin-left: 8.5em;
+            }
+        }
+        
+        @media screen and (max-width: 1200px) {
+            #info h4 {
+                margin-left: 5.3em;
+            }
+        }
+        
     </style>
-  </head>
-  <body>
-      <div id="leftside">
-    <div id="patientinfo"><h1>FIRST NAME LAST NAME</h1></div>
-      
-          <div id="pic">    
-    <img src="http://didier-chantier.com/wp-content/uploads/2018/09/Human-Body-Outline-Printable-Cool-Photo-Gallery-Website-With-Human-Body-Outline-Printable.jpg" alt="body">
+</head>
+
+<body>
+    <div id="leftside">
+        <div id="patientinfo">
+            <h1>FIRST NAME LAST NAME</h1>
+        </div>
+
+        <div id="pic">
+            <img src="http://didier-chantier.com/wp-content/uploads/2018/09/Human-Body-Outline-Printable-Cool-Photo-Gallery-Website-With-Human-Body-Outline-Printable.jpg" alt="body">
+        </div>
+
+        <h1><span id="firstName"></span> <span id="lastName"></span></h1>
     </div>
 
-    <h1><span id= "firstName"></span> <span id="lastName"></span></h1>
-          </div>
-
     <div id="rightside">
-      <div id="info">
-      <h2> Patient Info</h2>
-        <h4>Age</h4>
-        <h4>Height</h4>
-        <h4>Weight</h4>
-        <h4>Disease Alert</h4>
+        <div id="info">
+            <h2> Patient Info</h2>
+            <h4>Age</h4>
+            <h4>Height</h4>
+            <h4>Weight</h4>
+            <h4>Disease Alert</h4>
         </div>
-        
-      <div id="textPrompts">
-      <div id="symptoms">
-    <h3>Symptoms</h3>
-    <textarea rows="10" cols="50" placeholder="(Press Add Symptoms to insert text)" readonly></textarea>
-          <br>
-          <button onclick="document.getElementById('symptomPopup').style.display='block'" id="symptomButton">Add Symptoms</button>
-        <p id="myAge"></p>
-        <p id="myWeight"></p>
-        <p id="myDisease"></p>
-      
-      </div>
-      
-      <div id= "symptomPopup" >
-    <textarea rows="32" cols="90"> </textarea>
-    <button onclick="document.getElementById('symptomPopup').style.display='none'" class="saveButton">Save</button>
-      </div>
-          </div>
-        
-      <div id="textPrompts2">
-      
-      
-   
-      <div id="other">
-      <h3>Other Findings</h3>
-      <textarea rows="10" cols="50" placeholder="(Press Add Other Findings to insert text)" readonly></textarea>
-          <br>
-    <button onclick="document.getElementById('otherPopup').style.display='block'" class="button">Add Other Findings
-          </button></div>
-      
-      <div id="otherPopup">
-    <textarea rows="32" cols="90"> </textarea>
-    <button onclick="document.getElementById('otherPopup').style.display='none'" id="otherFindingsSaveButton">Save</button>
-      </div>
-          </div>
-          </div>
+
+        <div id="textPrompts">
+            <div id="symptoms">
+                <h3>Symptoms</h3>
+                <textarea rows="10" cols="50" placeholder="(Press Add Symptoms to insert text)" readonly></textarea>
+                <br>
+                <button onclick="document.getElementById('symptomPopup').style.display='block'" id="symptomButton">Add Symptoms</button>
+                <p id="myAge"></p>
+                <p id="myWeight"></p>
+                <p id="myDisease"></p>
+
+            </div>
+
+            <div id="symptomPopup">
+                <textarea rows="32" cols="90"> </textarea>
+                <button onclick="document.getElementById('symptomPopup').style.display='none'" class="saveButton">Save</button>
+            </div>
+        </div>
+
+        <div id="textPrompts2">
+
+
+
+            <div id="other">
+                <h3>Other Findings</h3>
+                <textarea rows="10" cols="50" placeholder="(Press Add Other Findings to insert text)" readonly></textarea>
+                <br>
+                <button onclick="document.getElementById('otherPopup').style.display='block'" class="button">Add Other Findings
+                </button>
+            </div>
+
+            <div id="otherPopup">
+                <textarea rows="32" cols="90"> </textarea>
+                <button onclick="document.getElementById('otherPopup').style.display='none'" id="otherFindingsSaveButton">Save</button>
+            </div>
+        </div>
+    </div>
 
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
