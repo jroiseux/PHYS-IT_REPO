@@ -1,0 +1,197 @@
+
+        @import url(https://fonts.googleapis.com/css?family=Hind);
+
+        html {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            font-family: 'Hind', sans-serif;
+            width: 100%;
+            height: 100%;
+        }
+
+        #leftside {
+            float: left;
+            width: 50%;
+            height: 100%;
+        }
+
+        #patientinfo {
+            width: 100%;
+            height: 10%;
+            background-color: red;
+            display: grid;
+            align-content: center;
+            text-align: center;
+        }
+
+        #patientinfo h1 {
+            font-size: 35pt;
+            width: 100%;
+            height: 100%;
+        }
+
+        #rightside {
+            width: 50%;
+            height: 90%;
+            background-color: orange;
+            float: right;
+
+        }
+
+        #info {
+            width: 100%;
+            height: 30%;
+            background-color: pink;
+            text-align: left;
+        }
+
+        #info h2 {
+            margin-left: 8.6em;
+        }
+
+        #info h4 {
+            margin-left: 13em;
+        }
+
+        #pic {
+            width: 90%;
+            height: 90%;
+            background-color: aqua;
+            align-content: center;
+            position: relative;
+            display: grid;
+        }
+
+        #pic img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 2em;
+            margin-left: 2em;
+            display: block;
+        }
+
+        #textPrompts {
+            width: 100%;
+            height: 40%;
+            background-color: blue;
+            text-align: center;
+        }
+
+        #textPrompts2 {
+            width: 100%;
+            height: 30%;
+            text-align: center;
+            margin-top: -1em;
+        }
+
+        #other h3 {
+            margin-left: -11.5em;
+            font-size: 18pt;
+        }
+
+        #symptoms h3 {
+            margin-left: -13.4em;
+            font-size: 18pt;
+        }
+
+        #symptoms textarea {
+            font-size: 12pt;
+        }
+
+        textarea {
+            font-size: 12pt;
+        }
+
+        #bigPopup {
+            display: grid;
+            text-align: center;
+
+        }
+
+        #symptomPopup {
+            display: none;
+            /*position: fixed;*/
+            z-index: 1;
+            margin-top: -15em;
+            margin-left: -30em;
+        }
+
+        #symptomPopup textarea {
+            position: absolute;
+            margin-left: -39em;
+            margin-top: -10em;
+            border: solid 5px black;
+        }
+
+        #otherPopup textarea {
+            position: absolute;
+            margin-left: -54em;
+            margin-top: -31.35em;
+            border: solid 5px black;
+        }
+
+        #symptomButton {
+            height: 4em;
+            width: 10.8em;
+
+        }
+
+        .button {
+            height: 4em;
+
+        }
+
+        .saveButton {
+            height: 2em;
+            width: 500px;
+            align-content: center;
+            margin-top: 35em;
+            margin-left: 14em;
+            display: grid;
+            position: absolute;
+            height: 3em;
+        }
+
+        #otherFindingsSaveButton {
+            height: 2em;
+            width: 500px;
+            align-content: center;
+            margin-top: 3.9em;
+            margin-left: -29.6em;
+            display: grid;
+            position: absolute;
+            height: 3em;
+        }
+
+        #otherPopup {
+            display: none;
+            z-index: 1;
+            margin-top: -15em;
+        }
+        
+        @media screen and (max-width: 1600px) {
+            #info h4 {
+                margin-left: 10.7em;
+            }
+        }
+        
+        @media screen and (max-width: 1500px) {
+            #info h4 {
+                margin-left: 8.9em;
+            }
+        }
+        
+        @media screen and (max-width: 1400px) {
+            #info h4 {
+                margin-left: 8.5em;
+            }
+        }
+        
+        @media screen and (max-width: 1200px) {
+            #info h4 {
+                margin-left: 5.3em;
+            }
+        }
