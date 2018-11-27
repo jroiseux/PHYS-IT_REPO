@@ -71,6 +71,9 @@
     <div id="navBar"> 
         <h1>PHYS-IT</h1>
     </div>
+
+    <br>
+    <br>
     <hr>
 
   
@@ -86,12 +89,17 @@
   <div id="loader">Loading the login screen...</div>
 
   <script>
+  
+
+     
   var uiConfig = {
     callbacks: {
+    
       signInSuccessWithAuthResult: function(authResult, redirectUrl) {
         // User successfully signed in.
         // Return type determines whether we continue the redirect automatically
         // or whether we leave that to developer to handle.
+        
         return true;
       },
       uiShown: function() {
@@ -113,10 +121,7 @@
     // Privacy policy url.
     privacyPolicyUrl: ''
   };
-
-
   //The start method will wait until the DOM is loaded.
-
   ui.start('#firebaseui-auth-container', uiConfig);
   </script>
 

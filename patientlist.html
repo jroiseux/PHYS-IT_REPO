@@ -4,24 +4,14 @@
   <title>Patient List</title>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
-  <script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyBHkznc6I46EAtk3L8bKm3h3t2Yx9NUyZI",
-    authDomain: "phys-it.firebaseapp.com",
-    databaseURL: "https://phys-it.firebaseio.com",
-    projectId: "phys-it",
-    storageBucket: "phys-it.appspot.com",
-    messagingSenderId: "960737516865"
-  };
-  firebase.initializeApp(config);
-</script>
-<style>
-#patients {
-  width: 100%;
-}
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/list.js"></script>
+  <style>
+  #patients {
+    width: 100%;
+  }
 
 </style>
 </head>
@@ -44,32 +34,5 @@
       </table>
     </div>
   </div>
-
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  <script>
-      var database = firebase.database();
-      var patientList = firebase.database().ref().child('Patients');
-      var count = 0;
-      patientList.on('value', function(snap){
-          if(snap.exists()){
-              var content = '';
-              snap.forEach(function(childNodes) {
-                count++;
-                var firstName = childNodes.val().FirstName;
-                var lastName = childNodes.val().LastName;
-                var phoneNumber = childNodes.val().PhoneNumber;
-                var appointmentTime = childNodes.val().AppointmentTime;
-                  content +='<tr>';
-                  content += '<td>' + firstName + '</td>';
-                  content += '<td>' + lastName + '</td>';
-                  content += '<td>' + phoneNumber + '</td>';
-                  content += '<td>' + appointmentTime + '</td>';
-                  content += '<td><button><a href="patientprofile.html?patient='+ count +'">View</a></button></td>';
-                  content += '</tr>';
-              });
-              $('#patients').append(content);
-          }
-      });
-  </script>
 </body>
 </html>
