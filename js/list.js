@@ -35,7 +35,6 @@ firebase.auth().onAuthStateChanged(function(user) {
               localStorage.setItem('patientid', obj.value);
               console.log(obj.value);
             }
-            console.log(JSON.stringify(snap.val().FirstName));
             var content = '';
             content +='<tr>';
             content += '<td>' + snap.val().FirstName +'</td>';

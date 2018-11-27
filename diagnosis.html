@@ -9,6 +9,10 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <script src="js/app.js"></script>
   <script src="js/diagnosis.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js"
+    integrity="sha384-THVO/sM0mFD9h7dfSndI6TS0PgAGavwKvB5hAxRRvc0o9cPLohB0wb/PTA7LdUHs"
+    crossorigin="anonymous">
+  </script>
   <style>
 
     html {
@@ -156,7 +160,7 @@
       </a>
     </div>
     <div id="print">
-      <button type="button">Print</button>
+      <button type="button" onclick="createPDF()">Print</button>
     </div>
   </div>
 
@@ -189,8 +193,7 @@
       <h2>Exercises</h2>
       <textarea id="exercisesTextarea"
         onfocus="$('#exercisesPopup').css('display', 'block')"
-        rows="10" cols="50" placeholder="(Enter text here)" readonly>
-      </textarea>
+        rows="10" cols="50" placeholder="(Enter text here)" readonly></textarea>
     </div>
 
     <div id="exercisesPopup">
