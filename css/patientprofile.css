@@ -1,7 +1,7 @@
 
         @import url(https://fonts.googleapis.com/css?family=Hind);
 
-        html {
+       html {
             width: 100%;
             height: 100%;
         }
@@ -15,12 +15,12 @@
         #leftside {
             float: left;
             width: 50%;
-            height: 100%;
+            height: 60em;
         }
 
         #patientinfo {
             width: 100%;
-            height: 10%;
+            height: 5em;
             background-color: red;
             display: grid;
             align-content: center;
@@ -43,7 +43,7 @@
 
         #info {
             width: 100%;
-            height: 30%;
+            height: 17em;
             background-color: pink;
             text-align: left;
         }
@@ -57,7 +57,7 @@
         }
 
         #pic {
-            width: 90%;
+            width: 100%;
             height: 90%;
             background-color: aqua;
             align-content: center;
@@ -70,7 +70,7 @@
             height: auto;
             margin-top: 2em;
             margin-left: 2em;
-            display: block;
+            text-align: center;
         }
 
         #textPrompts {
