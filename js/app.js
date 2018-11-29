@@ -25,24 +25,3 @@ function saveMedicalInfo(key) {
       [key]: text
     });
 };
-
-function saveExercise(text) {
-  var newPostKey = firebase.database().ref().child("Patients/" + patientid + "/MedicalInfo/Exercises").push().key;
-  var updates = {};
-  updates["Patients/" + patientid + "/MedicalInfo/Exercises/" + newPostKey] = {'exercise': text};
-  firebase.database().ref().update(updates);
-  //$('#Exercises').html('');
-
-};
-
-function displayExercises(textareaid) {
-  //$('#' + textareaid).html("");
-  firebase.database()
-    .ref("Patients/" + patientid + "/MedicalInfo/Exercises/")
-    .once('value', function(snap) {
-          exercises = snap.val();
-          snap.forEach(function(e){
-            $('#' + textareaid).append(e.val().exercise + '\n');
-          });
-    });
-}

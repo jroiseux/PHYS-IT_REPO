@@ -9,37 +9,52 @@ patientList.on('value', function(snap) {
 });
 
 
+function saveExercise(text) {
+  var newPostKey = firebase.database().ref().child("Patients/" + patientid + "/MedicalInfo/Exercises").push().key;
+  var updates = {};
+  updates["Patients/" + patientid + "/MedicalInfo/Exercises/" + newPostKey] = {'exercise': text};
+  firebase.database().ref().update(updates);
+  $('#Exercises').html('');
+
+};
+
+function displayExercises(textareaid) {
+  //$('#' + textareaid).html("");
+  firebase.database()
+  .ref("Patients/" + patientid + "/MedicalInfo/Exercises/")
+  .on('value', function(snap) {
+    exercises = snap.val();
+    $('#' + textareaid).html("");
+    snap.forEach(function(e){
+      $('#' + textareaid).append(e.val().exercise + '\n');
+    });
+  });
+}
+
+
 function createPDF(){
   var doc = new jsPDF()
+  var specialElementHandlers = {
+    '#editor': function (element, renderer) {
+      return true;
+    }
+  };
   var content = "";
   patientList.on('value', function(snap) {
-    content +='<ul>';
+    doc.text(snap.val().FirstName + " " + snap.val().LastName, 10, 15);
+    doc.text("Exercises:", 10, 25);
+    var height = 35;
     firebase.database()
-      .ref("Patients/" + patientid + "/MedicalInfo/Exercises/")
-      .once('value', function(snap) {
-            exercises = snap.val();
-            snap.forEach(function(e){
-              content += '<li>' + snap.val().exercises +'</li>';
-            });
+    .ref("Patients/" + patientid + "/MedicalInfo/Exercises/")
+    .once('value', function(snap) {
+      exercises = snap.val();
+      snap.forEach(function(e){
+        doc.text("  - " + e.val().exercise, 10, height);
+        height = height + 10;
+      });
     });
-    content += '</ul>'
-
-
-  //  content += '<td>' + snap.val().LastName + '</td>';
-    //content += '<td>' + snap.val().PhoneNumber + '</td>';
-    //content += '<td>' + snap.val().AppointmentTime + '</td>';
-
-    //doc.text(snap.val().FirstName+" "+snap.val().LastName, 10, 10);
-  //  doc.text(firstName, 20, 20);
-    //doc.text();
-    //doc.text("Age: " + snap.val().sAge);
-    //$('#myWeight').html("Weight: " + snap.val().Weight);
-    //$('#myDisease').html("Disease Alert: " + snap.val().Disease);
-
   });
-
-  doc.text(content, 10, 10)
-  doc.save('a4.pdf')
+  doc.save('exercises.pdf')
 }
 
 $(document).ready(function() {
