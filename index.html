@@ -4,36 +4,19 @@
 <head>
   <title>Phys-IT Login-In</title>
   <meta charset="utf-8">
-<link href = "CSS/index.css" rel = "stylesheet">
+  <link href = "CSS/index.css" rel = "stylesheet">
   <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
   <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
-
   <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
-  <script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyBHkznc6I46EAtk3L8bKm3h3t2Yx9NUyZI",
-    authDomain: "phys-it.firebaseapp.com",
-    databaseURL: "https://phys-it.firebaseio.com",
-    projectId: "phys-it",
-    storageBucket: "phys-it.appspot.com",
-    messagingSenderId: "960737516865"
-  };
-  firebase.initializeApp(config);
-  </script>
+  <script src="js/app.js"></script>
+  <script src="js/index.js"></script>
 </head>
 
 <body>
-    <div id="navBar"> 
-        <h1>PHYS-IT</h1>
-    </div>
-    <hr>
-
-  
-  <script>
-  // Initialize the FirebaseUI Widget using Firebase.
-  var ui = new firebaseui.auth.AuthUI(firebase.auth());
-  </script>
+  <div id="navBar">
+    <h1>PHYS-IT</h1>
+  </div>
+  <hr>
 
   <!-- The surrounding HTML is left untouched by FirebaseUI.
   Your app may use that space for branding, controls and other customizations.-->
@@ -41,43 +24,5 @@
   <div id="firebaseui-auth-container"></div>
   <div id="loader">Loading the login screen...</div>
 
-  <script>
-  
-
-     
-  var uiConfig = {
-    callbacks: {
-    
-      signInSuccessWithAuthResult: function(authResult, redirectUrl) {
-        // User successfully signed in.
-        // Return type determines whether we continue the redirect automatically
-        // or whether we leave that to developer to handle.
-        
-        return true;
-      },
-      uiShown: function() {
-        // The widget is rendered.
-        // Hide the loader.
-        document.getElementById('loader').style.display = 'none';
-      }
-    },
-    // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
-    signInFlow: 'popup',
-    signInSuccessUrl: 'patientList.html',
-    signInOptions: [
-      // Leave the lines as is for the providers you want to offer your users.
-
-      firebase.auth.EmailAuthProvider.PROVIDER_ID,
-    ],
-    // Terms of service url.
-    tosUrl: '',
-    // Privacy policy url.
-    privacyPolicyUrl: ''
-  };
-  //The start method will wait until the DOM is loaded.
-  ui.start('#firebaseui-auth-container', uiConfig);
-  </script>
-
 </body>
-
 </html>
