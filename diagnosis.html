@@ -5,14 +5,14 @@
   <title>Diagnosis</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href = "CSS/diagnosis.css" rel = "stylesheet">
+  <link href = "CSS/diagnosis.css" rel = "stylesheet">
   <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <script src="js/app.js"></script>
   <script src="js/diagnosis.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js"
-    integrity="sha384-THVO/sM0mFD9h7dfSndI6TS0PgAGavwKvB5hAxRRvc0o9cPLohB0wb/PTA7LdUHs"
-    crossorigin="anonymous">
+  integrity="sha384-THVO/sM0mFD9h7dfSndI6TS0PgAGavwKvB5hAxRRvc0o9cPLohB0wb/PTA7LdUHs"
+  crossorigin="anonymous">
   </script>
 </head>
 
@@ -40,33 +40,28 @@
     <div id="diagnosis">
       <h2>Diagnosis</h2>
       <textarea id="diagnosisTextarea"
-        onfocus="$('#diagnosisPopup').css('display', 'block')"
-        rows="10" cols="50" placeholder="(Enter text here)" readonly>
-      </textarea>
-    </div>
-    <div id="diagnosisPopup">
-      <textarea rows="32" cols="90" id="Diagnosis"></textarea>
-      <button class="saveButton"
-        onclick="$('#diagnosisPopup').css('display', 'none'); saveMedicalInfo('Diagnosis')">Save</button>
+      onfocus="$('#diagnosisPopup').css('display', 'block')"
+      rows="10" cols="50" placeholder="(Enter text here)" readonly>
+    </textarea>
+  </div>
+  <div id="diagnosisPopup">
+    <textarea rows="32" cols="90" id="Diagnosis"></textarea>
+    <button class="saveButton"
+    onclick="$('#diagnosisPopup').css('display', 'none'); saveMedicalInfo('Diagnosis')">Save</button>
+  </div>
+</div>
+
+<div id=textPrompts2>
+
+  <div id="exercises">
+    <h2>Exercises</h2>
+    <div id="exerciseList"></div>
+    <div class="dropdown">
+      <button class="dropbtn">Add New Exercise</button>
+      <div class="dropdown-content"></div>
     </div>
   </div>
-
-  <div id=textPrompts2>
-
-    <div id="exercises">
-      <h2>Exercises</h2>
-      <textarea id="exercisesTextarea"
-        onfocus="$('#exercisesPopup').css('display', 'block')"
-        rows="10" cols="50" placeholder="(Enter text here)" readonly></textarea>
-    </div>
-
-    <div id="exercisesPopup">
-      <textarea rows="32" cols="90" id="Exercises"></textarea>
-      <button class="saveButton"
-        onclick="$('#exercisesPopup').css('display', 'none'); saveExercise($('#Exercises').val())">Save</button>
-    </div>
-
-  </div>
+</div>
 
 </body>
 
