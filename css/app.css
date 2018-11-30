@@ -33,7 +33,6 @@
   background-color: rgba(0, 0, 0, 0.5);
   left: 0;
   top: 0;
-
 }
 
 #symptomPopup {
@@ -52,7 +51,7 @@
   height: 35%;
   width: 50%;
   margin: auto;
-  transform: translate(0, 40%);
+  transform: translate(0, 90%);
 }
 
 .textareaPopup {

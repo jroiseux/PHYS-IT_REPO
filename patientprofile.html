@@ -3,7 +3,8 @@
 <head>
     <title>Patient Profile</title>
     <meta charset="utf-8" />
-    <link href="css/patientprofile.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/app.css" rel="stylesheet">
     <link href="css/index.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
@@ -18,7 +19,7 @@
 <body>
   <div class="leftside">
     <div id="patientinfo">
-      <h1><span id="firstName"></span> <span id="lastName"></span></h1>
+      <h2><span id="firstName"></span> <span id="lastName"></span></h2>
     </div>
 
     <div class="imagebox">
@@ -36,7 +37,7 @@
 
     <div id="textPrompts">
       <div id="symptoms">
-        <h3>Symptoms</h3>
+        <h2>Symptoms</h2>
         <textarea id="symptomsTextarea" class="textarea"
           onfocus="$('#symptomPopup').css('display', 'block');"
           placeholder="(Insert text)" readonly>
@@ -44,7 +45,7 @@
       </div>
 
       <div id="other">
-        <h3>Other Findings</h3>
+        <h2>Other Findings</h2>
         <textarea id="otherTextarea" class="textarea"
           onfocus="$('#otherPopup').css('display', 'block')"
           placeholder="(Insert text)" readonly>
