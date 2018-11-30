@@ -1,156 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Diagnosis</title>
-  <meta charset="utf-8"/>
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-      
-      html {
-          width: 100%;
-          height: 100%;
-      }
-      body {
-          background-color: grey;
-          width: 100%;
-          height: 100%;
-      }
-      
-      #menu {
-          background-color: red;
-          height: 10%;
-      }
-      #back {
-          background-color: aqua;
-          width: 70%;
-          height: 50%;
-          font-size: 18pt;
-      }
-      
-      #print {
-          background-color: aqua;
-          width: 15%;
-          height: 50%;
-          float: right;
-          margin-top: -3em;
-          text-align: center;
-          display: inline;
-      }
-      
-      #print button {
-          margin-top: 0.25em;
-          font-size: 20pt;
-      }
-      
-      #patientPage {
-          width: 50%;
-          height:90%;
-          background-color: yellow;
-          text-align: center;
-          float: left;
-      }
-      
-      #patientPic {
-          font-size: 15pt;
-      }
-      
-      #textPrompts {
-          width: 50%;
-          height: 90%;
-          float: right;
-          background-color: antiquewhite;
-          display: grid;
-          align-content: center;
-      }
-      
-      #diagnosis {
-          text-align: center;
-      }
-      
-      #diagnosis h2 {
-          margin-left: -12em;
-          font-size: 20pt;
-      }
-      
-      #diagnosis textarea {
-          font-size: 12pt;
-      }
-      
-      #treatment {
-          text-align: center;
-      }
-      
-      #treatment h2 {
-          margin-left: -11.6em;
-          font-size: 20pt;
-      }
-      
-      #treatment p {
-          text-decoration: underline;
-          margin-left: -20.6em;
-          font-size: 13pt;
-      }
-      
-      #treatment textarea {
-          font-size: 12pt;
-      }
-      
-      #exercise {
-          text-align: center;
-      }
-      
-      #exercise p {
-          text-decoration: underline;
-          margin-left: -20em;
-          font-size: 13pt;
-      }
-      
-      #exercise textarea {
-          font-size: 12pt;
-      }
-    
-</style>
+  <link href="css/app.css" rel="stylesheet">
+  <link href="css/index.css" rel="stylesheet">
+  <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/diagnosis.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js"
+  integrity="sha384-THVO/sM0mFD9h7dfSndI6TS0PgAGavwKvB5hAxRRvc0o9cPLohB0wb/PTA7LdUHs"
+  crossorigin="anonymous">
+  </script>
 </head>
 
 <body>
-    <div id="menu">
-        <div id="back">
-            <a href="patientprofile.html">
-                <p>← Back to Patient Profile</p>
-            </a>
-        </div>
-        <div id="print">
-            <button type="button">Print</button>
-        </div>
+  <div id="navBar">
+    <h1>PHYS-IT</h1>
+  </div>
+  <hr>
+
+  <div id="menu">
+    <div id="back">
+      <a href="patientprofile.html">← Back to Patient Profile</a>
     </div>
-    
-    <div id="patientPage">
-        <div id = "patientPic">
-            <h1>FirstName LastName</h1>
-            <img src = "https://dummyimage.com/500x600/000/fff">
-        </div>       
+    <div id="print">
+      <button type="button" onclick="createPDF()">Print</button>
     </div>
-    
-    <div id = "textPrompts">   
-      
+  </div>
+
+  <div class="leftside">
+    <div>
+      <h2><span id="firstName"></span> <span id="lastName"></span></h2>
+    </div>
+    <div class="imagebox">
+      <img id="patientimage" src="https://dummyimage.com/500x600/000/fff">
+    </div>
+  </div>
+
+  <div class="rightside">
+    <div id="textPrompts">
       <div id="diagnosis">
-    <h2>Diagnosis</h2>
-    <textarea rows="10" cols="50" placeholder="(Enter text here)"></textarea>
+        <h2>Diagnosis</h2>
+        <textarea id="diagnosisTextarea" class="textarea"
+        onfocus="$('#diagnosisPopup').css('display', 'block')"
+        placeholder="(Enter text here)" readonly>
+      </textarea>
+    </div>
+
+    <div id="exercises">
+      <h2>Exercises</h2>
+      <div id="exerciseList"></div>
+      <div class="dropdown">
+        <button class="dropbtn">Add New Exercise</button>
+        <div class="dropdown-content"></div>
       </div>
-        
-   
-      <div id="treatment">
-      <h2>Treatment</h2>
-          <p>In-Clinic</p>
-      <textarea rows="10" cols="50" placeholder="(Enter text here)"></textarea>
-      </div>
-        
-        <div id="exercise">
-      <p>Treatment</p>
-      <textarea rows="10" cols="50" placeholder="(Enter text here)"></textarea>
-      </div>
-            
-        </div>
+    </div>
+  </div>
+</div>
+
+<div id="diagnosisPopup" class="popupdiv">
+  <div class="popup">
+  <textarea id="Diagnosis" class="textareaPopup"></textarea>
+  <button class="saveButton"
+  onclick="$('#diagnosisPopup').css('display', 'none'); saveMedicalInfo('Diagnosis')">Save</button>
+</div>
+</div>
 
 </body>
 
