@@ -3,67 +3,71 @@
 <head>
     <title>Patient Profile</title>
     <meta charset="utf-8" />
-    <link href = "CSS/patientprofile.css" rel = "stylesheet">
+    <link href="css/patientprofile.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
     <script src="js/app.js"></script>
     <script src="js/profile.js"></script>
 </head>
+<div id="navBar">
+  <h1>PHYS-IT</h1>
+</div>
+<hr>
 
 <body>
-  <div id="leftside">
+  <div class="leftside">
     <div id="patientinfo">
       <h1><span id="firstName"></span> <span id="lastName"></span></h1>
     </div>
 
-    <div id="pic">
-      <img src="images/body.jpg" alt="body">
+    <div class="imagebox">
+      <img id="bodyimage" src="images/body.jpg" alt="body">
     </div>
   </div>
 
-  <div id="rightside">
+  <div class="rightside">
     <div id="info">
       <h2> Patient Info</h2>
-      <h4 id="myAge"></h4>
-      <h4 id="myWeight"></h4>
-      <h4 id="myDisease"></h4>
+      <h4 id="age"></h4>
+      <h4 id="weight"></h4>
+      <h4 id="disease"></h4>
     </div>
 
     <div id="textPrompts">
       <div id="symptoms">
         <h3>Symptoms</h3>
-        <textarea id="symptomsTextarea"
+        <textarea id="symptomsTextarea" class="textarea"
           onfocus="$('#symptomPopup').css('display', 'block');"
-          rows="10" cols="50"
-          placeholder="(Press Add Symptoms to insert text)" readonly>
+          placeholder="(Insert text)" readonly>
         </textarea>
       </div>
-
-      <div id="symptomPopup">
-        <textarea rows="32" cols="90" id="Symptoms"></textarea>
-        <button class="saveButton"
-          onclick="$('#symptomPopup').css('display', 'none'); saveMedicalInfo('Symptoms');">Save</button>
-      </div>
-    </div>
-
-    <div id="textPrompts2">
 
       <div id="other">
         <h3>Other Findings</h3>
-        <textarea id="otherTextarea"
+        <textarea id="otherTextarea" class="textarea"
           onfocus="$('#otherPopup').css('display', 'block')"
-          rows="10" cols="50"
-          placeholder="(Press Add Other Findings to insert text)" readonly>
+          placeholder="(Insert text)" readonly>
         </textarea>
-      </div>
-
-      <div id="otherPopup">
-        <textarea rows="32" cols="90" id="OtherFindings"></textarea>
-        <button id="otherFindingsSaveButton"
-          onclick="$('#otherPopup').css('display','none'); saveMedicalInfo('OtherFindings')">Save</button>
       </div>
     </div>
   </div>
+
+<div id="symptomPopup" class="popupdiv">
+  <div class="popup">
+    <textarea id="Symptoms" class="textareaPopup"></textarea>
+    <button class="saveButton"
+      onclick="$('#symptomPopup').css('display', 'none'); saveMedicalInfo('Symptoms');">Save</button>
+  </div>
+</div>
+
+<div id="otherPopup" class="popupdiv">
+  <div class="popup">
+    <textarea id="OtherFindings" class="textareaPopup"></textarea>
+    <button class="savebutton"
+      onclick="$('#otherPopup').css('display','none'); saveMedicalInfo('OtherFindings')">Save</button>
+  </div>
+</div>
 </body>
 
 </html>

@@ -6,9 +6,9 @@ patientList.on('value', function(snap) {
 
   $('#firstName').html(snap.val().FirstName);
   $('#lastName').html(snap.val().LastName);
-  $('#myAge').html("Age: " + snap.val().sAge);
-  $('#myWeight').html("Weight: " + snap.val().Weight);
-  $('#myDisease').html("Disease Alert: " + snap.val().Disease);
+  $('#age').html("Age: " + snap.val().sAge);
+  $('#weight').html("Weight: " + snap.val().Weight);
+  $('#disease').html("Disease Alert: " + snap.val().Disease);
 
 });
 
