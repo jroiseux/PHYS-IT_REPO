@@ -1,3 +1,7 @@
+body {
+    background-color: #2527AD;
+}
+
 .leftside {
   box-sizing: border-box;
   width: 50%;
@@ -23,6 +27,7 @@
 .textarea {
   width: 100%;
   height: 10em;
+    font-size: 13pt;
 }
 
 .popupdiv {
@@ -65,12 +70,13 @@
 }
 
 .dropbtn {
-  background-color: #AAAAAA;
-  color: white;
+  background-color: #289CCA;
+  color: black;
   padding: 16px;
   font-size: 16px;
-  border: none;
+  border: white solid 1px;
   cursor: pointer;
+    border-radius: 24px;
 }
 
 .dropdown {
@@ -102,9 +108,43 @@
 .dropdown:hover .dropbtn {
   background-color: #AAAAAA;
 }
+
+#diagnosisLeftSide {
+    display: grid;
+    align-content: center;
+}
+
+#patientname {
+    width: 75%;
+}
+
+#patientname h2 {
+    text-align: center;
+    font-size: 30pt;
+}
+
+#patientimage {
+    margin-top: 1em;
+}
+
+#diagnosisarea {
+    width: 90%;
+    height: auto;
+    background-color: red;
+    margin: auto;
+}
+
+#navBar h1 {
+    
+}
+
 #menu {
-    width: 100%;
+    width: 95%;
     overflow: hidden;
+    padding: 0.5em;
+    margin: auto;
+    background-color: #464866;
+    border: solid 2px #29648A;
 }
 
 #back {
@@ -112,6 +152,11 @@
   font-size: 18pt;
   margin: 0 0 0 1em;
 }
+
+#back a:visited {
+    color: #2E9CCA;
+}
+
 #print {
     float: right;
     text-align: center;
@@ -120,5 +165,13 @@
 }
 
 #print button {
-    font-size: 20pt;
+    font-size: 18pt;
+    width: 6em;
+    border-radius: 12px;
+    background-color: #289CCA;
+}
+
+#exerciseList {
+    font-size: 15pt;
+    background-color: #464866;
 }

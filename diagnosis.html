@@ -25,15 +25,16 @@
 
   <div id="menu">
     <div id="back">
-      <a href="patientprofile.html">← Back to Patient Profile</a>
+      <a href="patientprofile.html" button type="button">← Back to Patient Profile</a>
     </div>
     <div id="print">
       <button type="button" onclick="createPDF()">Print</button>
     </div>
   </div>
 
-  <div class="leftside">
-    <div>
+    <div id="diagnosisarea">
+  <div class="leftside" id="diagnosisLeftSide">
+    <div id="patientname">
       <h2><span id="firstName"></span> <span id="lastName"></span></h2>
     </div>
     <div class="imagebox">
@@ -45,9 +46,9 @@
     <div id="textPrompts">
       <div id="diagnosis">
         <h2>Diagnosis</h2>
-        <textarea id="diagnosisTextarea" class="textarea"
+        <textarea placeholder="(Click here to enter text)" id="diagnosisTextarea" class="textarea"
         onfocus="$('#diagnosisPopup').css('display', 'block')"
-        placeholder="(Enter text here)" readonly>
+         readonly>
       </textarea>
     </div>
 
@@ -69,6 +70,7 @@
   onclick="$('#diagnosisPopup').css('display', 'none'); saveMedicalInfo('Diagnosis')">Save</button>
 </div>
 </div>
+        </div>
 
 </body>
 
