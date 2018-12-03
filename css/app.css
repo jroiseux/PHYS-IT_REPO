@@ -195,8 +195,19 @@ body {
   margin: 0 0 0 1em;
 }
 
+#back button {
+    background-color: #289CCA;
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: white solid 1px;
+  cursor: pointer;
+    border-radius: 24px;
+}
+
 #back a:visited {
-    color: #2E9CCA;
+    color: black;
+    text-shadow: 2px 2px 2px black;
 }
 
 #print {
@@ -209,6 +220,7 @@ body {
 #print button {
     font-size: 18pt;
     width: 6em;
+    margin-top: 0.5em;
     border-radius: 12px;
     background-color: #289CCA;
 }
