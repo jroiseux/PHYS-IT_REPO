@@ -1,5 +1,5 @@
 body {
-    background-color: #2527AD;
+    background-color: #AAABB8;
 }
 
 .leftside {
@@ -22,7 +22,7 @@ body {
 
 #info {
     border: solid 3px #29648A;
-    background-color: #464866;
+    background-color: #3C414F;
 }
 
 #info h4 {
@@ -36,7 +36,7 @@ body {
 
 #bodyimage {
   max-width: 100%;
-    border: solid 5px #29648A;
+    border: solid 4px #289CCA;
 }
 
 #patientimage {
@@ -183,12 +183,12 @@ body {
     overflow: hidden;
     padding: 0.5em;
     margin: auto;
-    background-color: #464866;
+    background-color: #3C414F;
     border: solid 2px #29648A;
 }
 
 #patientimage {
-    border: solid 5px #29648A;
+    border: solid 3px #29648A;
 }
 
 #back {
@@ -245,7 +245,7 @@ body {
 
 #exerciseList {
     font-size: 15pt;
-    background-color: #464866;
+    background-color: #3C414F;
     border: 1px solid #289CCA;
     padding: 0.5em;
 }

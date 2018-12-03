@@ -11,7 +11,7 @@
       }
       
       body {
-          background-color: #47476B;
+          background-color: #22232a;
           color: white;
           width: 100%;
           height: 100%:
@@ -38,7 +38,7 @@ captions {
       #navBar {
             width: 100%;
             height: 8em;
-            background-color: #29293d;
+            background-color: #33334d;
             align-content: center;
             display: grid;
           margin-top: 1em;
@@ -79,7 +79,7 @@ captions {
 }
 
 #back button {
-  background-color: #289CCA;
+  background-color: #2E303D;
   color: black;
   padding: 16px;
   font-size: 16px;
@@ -93,7 +93,7 @@ captions {
     overflow: hidden;
     padding: 0.5em;
     margin: auto;
-    background-color: #464866;
+    background-color: #3C414F;
     border: solid 2px #29648A;
 }
 
@@ -114,8 +114,8 @@ td {
 }
 
 #patients {
-    background-color: #464866;
-    border: 1px solid #289CCA;
+    background-color: #3C414F;
+    border: 1px solid #29648A;
 }
 
 td button {
