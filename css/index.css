@@ -38,7 +38,7 @@ body h2 {
 
 .banner_container {
   background: url("../images/Banner.png") repeat-x;
-    filter: brightness(50%);
+    filter: brightness(60%);
   height: 370px;
   width: 1000%;
   animation: slide 60s linear infinite;
