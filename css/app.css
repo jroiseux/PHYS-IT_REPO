@@ -17,11 +17,13 @@ body {
 }
 
 #bodyimage {
-  max-width: 100%;
+  width: 100%;
 }
 
 #patientimage {
-  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5%;
 }
 
 .textarea {
@@ -109,13 +111,8 @@ body {
   background-color: #AAAAAA;
 }
 
-#diagnosisLeftSide {
-    display: grid;
-    align-content: center;
-}
-
 #patientname {
-    width: 75%;
+    width: 100%;
 }
 
 #patientname h2 {
@@ -123,19 +120,8 @@ body {
     font-size: 30pt;
 }
 
-#patientimage {
-    margin-top: 1em;
-}
-
-#diagnosisarea {
-    width: 90%;
-    height: auto;
-    background-color: red;
-    margin: auto;
-}
-
 #navBar h1 {
-    
+
 }
 
 #menu {
