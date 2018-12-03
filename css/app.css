@@ -30,6 +30,10 @@ body {
     text-shadow: 2px 2px 2px black;
 }
 
+#age {
+    font-size:;
+}
+
 #bodyimage {
   max-width: 100%;
     border: solid 5px #29648A;
@@ -194,14 +198,30 @@ body {
 }
 
 #back button {
-    background-color: #289CCA;
+  background-color: #289CCA;
   color: black;
   padding: 16px;
   font-size: 16px;
   border: white solid 1px;
   cursor: pointer;
-    border-radius: 24px;
+  border-radius: 24px;
 }
+
+#log_out {
+ float: right;
+ font-size: 18pt;
+ margin: 0 0 0 1em;    
+}
+
+#log_out button {
+ font-size: 18pt;
+    width: 6em;
+    margin-top: 0.5em;
+    border-radius: 12px;
+    background-color: #289CCA;
+}
+
+
 
 #back a:visited {
     color: black;

@@ -25,3 +25,8 @@ function saveMedicalInfo(key) {
       [key]: text
     });
 };
+
+document.getElementById("log_out").onclick=function(){
+firebase.auth().signOut()
+location.href="./index.html";
+};
