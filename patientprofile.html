@@ -12,13 +12,17 @@
     <script src="js/profile.js"></script>
 </head>
 <div id="navBar">
-  <h1>PHYS-IT</h1>
+  <img src="images/logo.png">
 </div>
-<hr>
+    <div id="menu">
+    <div id="back">
+      <a href="patientlist.html" button type="button">← Back to Patient List</a>
+    </div>
+  </div>
 
 <body>
   <div class="leftside">
-    <div id="patientinfo">
+    <div id="patientname">
       <h2><span id="firstName"></span> <span id="lastName"></span></h2>
     </div>
 
@@ -28,8 +32,8 @@
   </div>
 
   <div class="rightside">
-    <div id="info">
       <h2> Patient Info</h2>
+    <div id="info">
       <h4 id="age"></h4>
       <h4 id="weight"></h4>
       <h4 id="disease"></h4>
@@ -40,7 +44,7 @@
         <h2>Symptoms</h2>
         <textarea id="symptomsTextarea" class="textarea"
           onfocus="$('#symptomPopup').css('display', 'block');"
-          placeholder="(Insert text)" readonly>
+          placeholder="(Click here to enter text)" readonly>
         </textarea>
       </div>
 
@@ -48,7 +52,7 @@
         <h2>Other Findings</h2>
         <textarea id="otherTextarea" class="textarea"
           onfocus="$('#otherPopup').css('display', 'block')"
-          placeholder="(Insert text)" readonly>
+          placeholder="(Click here to enter text)" readonly>
         </textarea>
       </div>
     </div>
