@@ -68,6 +68,24 @@ captions {
   float: left;
   font-size: 18pt;
   margin: 0 0 0 1em;
+  background-color: #289CCA;
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: white solid 1px;
+  cursor: pointer;
+  border-radius: 24px;
+}
+}
+
+#back button {
+  background-color: #289CCA;
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: white solid 1px;
+  cursor: pointer;
+  border-radius: 24px;
 }
 
 #menu {
@@ -103,5 +121,21 @@ td {
 td button {
     background-color: #289CCA;
    line-height: 2em;
+}
+
+#log_out {
+ float: right;
+ font-size: 18pt;
+ margin: 0 0 0 1em;    
+}
+
+#log_out button {
+  background-color: #289CCA;
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: white solid 1px;
+  cursor: pointer;
+  border-radius: 24px;
 }
 
