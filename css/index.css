@@ -38,6 +38,7 @@ body h2 {
 
 .banner_container {
   background: url("../images/Banner.png") repeat-x;
+    filter: brightness(50%);
   height: 370px;
   width: 1000%;
   animation: slide 60s linear infinite;
@@ -78,6 +79,7 @@ body h2 {
 #firebaseui-auth-container {
   font-family: 'Roboto Slab', serif;
     padding: 6em 0em;
+    margin-top: -15em;
     width: 100%;
     align-content: center;
     text-align: center;
