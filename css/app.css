@@ -30,10 +30,6 @@ body {
     text-shadow: 2px 2px 2px black;
 }
 
-#age {
-    font-size:;
-}
-
 #bodyimage {
   max-width: 100%;
     border: solid 3px #29648A;
@@ -137,7 +133,6 @@ body {
 
 #patientname {
     width: 75%;
-    margin-left: 2em;
 }
 
 #patientname h2 {
