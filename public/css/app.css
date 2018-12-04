@@ -118,6 +118,10 @@ body h2 {
   border-radius: 0.5em;
 }
 
+#back a {
+  color: black;
+}
+
 #back a:visited {
   color: black;
   text-shadow: 2px 2px 2px black;
@@ -125,7 +129,6 @@ body h2 {
 
 #log_out {
   float: right;
-  width: 12%;
   margin: 0 2em 0 0;
   position: relative;
   top: 50%;

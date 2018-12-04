@@ -37,19 +37,16 @@ function kneeClick() {
 };
 
 function shoulderClick() {
-    console.log("hello");
     localStorage.setItem('bodypart', 'shoulder');
     window.location = "diagnosis.html?shoulder";
 };
 
 function elbowClick() {
-    console.log("hello");
     localStorage.setItem('bodypart', 'elbow');
     window.location = "diagnosis.html?elbow";
 };
 
 function hipClick() {
-    console.log("hello");
     localStorage.setItem('bodypart', 'hip');
     window.location = "diagnosis.html?hip";
 };

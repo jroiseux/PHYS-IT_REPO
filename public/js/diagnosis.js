@@ -16,7 +16,6 @@ function displayList() {
     function(snap) {
       snap.forEach(function(snapshot){
         var ex = snapshot.val();
-        console.log(ex);
         $('.dropdown-content').append('<a onclick="addExercise(\''+ex+'\')">'+ex+'</a>');
       });
     });

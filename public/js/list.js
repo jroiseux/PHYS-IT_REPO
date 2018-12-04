@@ -22,14 +22,12 @@ firebase.auth().onAuthStateChanged(function(user) {
     function(snap) {
       snap.forEach(function(snapshot){
         var patientid = snapshot.key;
-        console.log(patientid)
         var patientref = firebase.database().ref("Patients/" + patientid);
         patientref.on(
           "value",
           function(snap) {
             function setPatientId(obj){
               localStorage.setItem('patientid', obj.value);
-              console.log(obj.value);
             }
             var content = '';
             content +='<tr>';
