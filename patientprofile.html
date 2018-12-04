@@ -12,24 +12,45 @@
     <script src="js/profile.js"></script>
 </head>
 <div id="navBar">
-  <h1>PHYS-IT</h1>
+  <img src="images/logo.png">
 </div>
-<hr>
+    <div id="menu">
+    <div id="back">
+     <button class="navbutton"><a href="patientlist.html">← Back to Patient List</a></button>
+    </div>
+    <div id="log_out">
+    <button id="sign_out" onclick="sign_out_function()">LOG OUT</button>
+    </div>
+  </div>
 
 <body>
   <div class="leftside">
-    <div id="patientinfo">
+    <div id="patientname">
       <h2><span id="firstName"></span> <span id="lastName"></span></h2>
     </div>
 
     <div class="imagebox">
-      <img id="bodyimage" src="images/body.jpg" alt="body">
+      <img id="bodyimage" src="images/body2.jpg" alt="body" usemap="#bodymap">
     </div>
   </div>
 
+<map name="bodymap">
+    <div id="shoulder_click">
+  <area shape="rect" coords="180,140,360, 230" alt="body" onclick="shoulderClick()" id= "shoulder_box">
+    </div>
+    <div id="elbow_click">
+  <area shape="rect" coords="100, 230, 435, 300" alt="body" onclick="elbowClick()">
+    </div>
+    <div id="knee_click">
+  <area shape="rect" coords="160, 435, 400, 550" alt="body" onclick="kneeClick()">
+    </div>
+    <div id="hip_click">
+  <area shape="rect" coords="203, 340, 370, 390" alt="body" onclick="hipClick()">
+    </div>
+ </map>
   <div class="rightside">
-    <div id="info">
       <h2> Patient Info</h2>
+    <div id="info">
       <h4 id="age"></h4>
       <h4 id="weight"></h4>
       <h4 id="disease"></h4>
@@ -40,7 +61,7 @@
         <h2>Symptoms</h2>
         <textarea id="symptomsTextarea" class="textarea"
           onfocus="$('#symptomPopup').css('display', 'block');"
-          placeholder="(Insert text)" readonly>
+          placeholder="(Click here to enter text)" readonly>
         </textarea>
       </div>
 
@@ -48,7 +69,7 @@
         <h2>Other Findings</h2>
         <textarea id="otherTextarea" class="textarea"
           onfocus="$('#otherPopup').css('display', 'block')"
-          placeholder="(Insert text)" readonly>
+          placeholder="(Click here to enter text)" readonly>
         </textarea>
       </div>
     </div>
@@ -69,6 +90,10 @@
       onclick="$('#otherPopup').css('display','none'); saveMedicalInfo('OtherFindings')">Save</button>
   </div>
 </div>
+
+<script>
+
+    </script>
 </body>
 
 </html>

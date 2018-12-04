@@ -5,9 +5,6 @@ firebase.auth().onAuthStateChanged(function(user) {
     // User is signed in.
     physioUID = user.uid;
     var id = physioUID
-  } else {
-    // No user is signed in.
-    alert("nope");
   }
 
   //var name, email;
@@ -20,10 +17,9 @@ firebase.auth().onAuthStateChanged(function(user) {
   }
 
   var ref = firebase.database().ref("Users/" + physioUID);
-  ref.on(
+  ref.once(
     "value",
     function(snap) {
-
       snap.forEach(function(snapshot){
         var patientid = snapshot.key;
         console.log(patientid)

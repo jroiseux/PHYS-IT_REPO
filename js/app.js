@@ -15,7 +15,7 @@ function displayText(key, textareaid) {
   ref.on('value', function(snap) {
     $('#' + textareaid).val(snap.val());
   });
-}
+};
 
 function saveMedicalInfo(key) {
   var text = $('#' + key).val();
@@ -24,4 +24,32 @@ function saveMedicalInfo(key) {
     .update({
       [key]: text
     });
+};
+
+function sign_out_function(){
+location.href="./index.html";
+firebase.auth().signOut()
+};
+
+function kneeClick() {
+    localStorage.setItem('bodypart', 'knee');
+    window.location = "diagnosis.html?knee";
+};
+
+function shoulderClick() {
+    console.log("hello");
+    localStorage.setItem('bodypart', 'shoulder');
+    window.location = "diagnosis.html?shoulder";
+};
+
+function elbowClick() {
+    console.log("hello");
+    localStorage.setItem('bodypart', 'elbow');
+    window.location = "diagnosis.html?elbow";
+};
+
+function hipClick() {
+    console.log("hello");
+    localStorage.setItem('bodypart', 'hip');
+    window.location = "diagnosis.html?hip";
 };

@@ -19,14 +19,16 @@
 
 <body>
   <div id="navBar">
-    <h1>PHYS-IT</h1>
+    <img src="images/Logo.png">
   </div>
-  <hr>
 
   <div id="menu">
     <div id="back">
-      <a href="patientprofile.html" button type="button">← Back to Patient Profile</a>
+        <button><a href="patientprofile.html">← Back to Patient Profile</a></button>
     </div>
+     <div id="log_out">
+    <button class="sign_out">LOG OUT</button>
+        </div>
     <div id="print">
       <button type="button" onclick="createPDF()">Print</button>
     </div>
@@ -37,7 +39,7 @@
       <h2><span id="firstName"></span> <span id="lastName"></span></h2>
     </div>
     <div class="imagebox">
-      <img id="patientimage" src="https://dummyimage.com/500x600/000/fff">
+ <img id="patientimage" src="https://dummyimage.com/500x600/000/fff">
     </div>
   </div>
 

@@ -1,5 +1,6 @@
 var patientid = localStorage.getItem('patientid');
 var patientList = firebase.database().ref("Patients/" + patientid);
+var bodyPart = localStorage.getItem('bodypart');
 
 patientList.on('value', function(snap) {
 
@@ -9,7 +10,7 @@ patientList.on('value', function(snap) {
 });
 
 function displayList() {
-  var ref = firebase.database().ref("exercises/knee");
+  var ref = firebase.database().ref("exercises/" + bodyPart);
   ref.on(
     "value",
     function(snap) {
@@ -75,12 +76,25 @@ function displayList() {
     doc.save('exercises.pdf')
   }
 
+function setImage() {
+    if (bodyPart === 'shoulder'){
+    $("#patientimage").attr("src", "images/shoulder.jpg");
+    }
+    else if (bodyPart === 'knee'){
+    $("#patientimage").attr("src", "images/knee.jpg");
+    }
+     else if (bodyPart === 'elbow'){
+    $("#patientimage").attr("src", "images/elbow.jpeg");
+    }
+     else if (bodyPart === 'hip'){
+    $("#patientimage").attr("src", "images/hip.jpg");
+    }
+}
   $(document).ready(function() {
     displayText('Diagnosis', 'diagnosisTextarea');
     displayText('Diagnosis', 'Diagnosis');
     displayList();
-    //displayText('Exercises', 'exercisesTextarea');
-    //displayText('Exercises', 'Exercises');
+    setImage();
     displayExercises();
 
   });
