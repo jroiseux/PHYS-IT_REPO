@@ -1,37 +1,3 @@
-
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
-
-html {
-  height: 100%;
-  width: 100%;
-}
-
-body {
-  height: 100%;
-  width: 100%;
-  background-color: #22232a;
-  color: white;
-}
-
-body h2 {
-  text-shadow: 2px 2px 2px black;
-  font-family: 'Roboto Slab', serif;
-}
-
-#navBar {
-  width: 100%;
-  align-content: center;
-  background-color: #22232a;
-  display: grid;
-}
-
-#navBar img {
-  text-align: center;
-    margin: auto;
-    height: 150px;
-    width: 400px;
-}
-
 .top_banner {
   overflow: hidden;
 }
@@ -54,28 +20,6 @@ body h2 {
   }
 }
 
-/*
-#description {
-    width:50%;
-    height: 28em;
-    align-content: center;
-    display: grid;
-    float: left;
-    text-align: center;
-}
-
-#description h1 {
-    font-family: Roboto Slab;
-    font-size: 30pt;
-}
-
-#description p {
-    font-family: Robot Slab;
-    font-size: 18pt;
-    margin-top: -0.5em;
-}
-*/
-
 #firebaseui-auth-container {
   font-family: 'Roboto Slab', serif;
     padding: 6em 0em;
@@ -91,10 +35,6 @@ body h2 {
   font-family: 'Roboto Slab', serif;
 }
 
-hr {
-    background-color: #AAABB8;
-}
-
 #triangle-topright {
       width: 75%;
       height: 30em;
@@ -106,4 +46,3 @@ hr {
     width: 100%;
     height: 10em;
 }
-  

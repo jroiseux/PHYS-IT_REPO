@@ -1,0 +1,83 @@
+#symptomPopup {
+  display: none;
+}
+
+#otherPopup {
+  display: none;
+}
+
+#bodyimage {
+  width: 100%;
+  border: solid 3px #29648A;
+}
+
+#anchorbox {
+  position: relative;
+  display: inline-block;
+}
+
+#anchorbox a {
+  position: absolute;
+  width: 15%;
+  height: 12%;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#leftShoulder {
+  top: 15%;
+  left: 32%;
+}
+
+#rightShoulder {
+  top: 15%;
+  left: 52%;
+}
+
+#leftElbow {
+  top: 30%;
+  left: 25%;
+}
+
+#rightElbow {
+  top: 30%;
+  left: 60%;
+}
+
+#leftHip {
+  top: 37%;
+  left: 36%;
+}
+
+#rightHip {
+  top: 37%;
+  left: 48%;
+}
+
+#leftKnee {
+  top: 60%;
+  left: 32%;
+}
+
+#rightKnee {
+  top: 60%;
+  left: 52%;
+}
+
+
+#info {
+  box-sizing: border-box;
+  padding: 0.618em;
+  border: solid 3px #29648A;
+  background-color: #3C414F;
+
+}
+
+#info h4 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 16pt;
+  text-shadow: 2px 2px 2px black;
+  padding: 0.618em 0 0.618em 0;
+  margin: 0;
+  box-sizing: border-box;
+}

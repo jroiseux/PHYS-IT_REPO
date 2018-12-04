@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Patient Profile</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/app.css" rel="stylesheet">
-    <link href="css/index.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/profile.js"></script>
+  <title>Patient Profile</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/app.css" rel="stylesheet">
+  <link href="css/profile.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/profile.js"></script>
 </head>
 <div id="navBar">
   <img src="images/logo.png">
 </div>
-    <div id="menu">
-    <div id="back">
-     <button class="navbutton"><a href="patientlist.html">← Back to Patient List</a></button>
-    </div>
-    <div id="log_out">
-    <button id="sign_out" onclick="sign_out_function()">LOG OUT</button>
-    </div>
+<div id="menu">
+  <div id="back">
+    <button class="navbutton"><a href="patientlist.html">← Patient List</a></button>
   </div>
+  <div id="log_out">
+    <button id="sign_out" onclick="sign_out_function()">Log Out</button>
+  </div>
+</div>
 
 <body>
   <div class="leftside">
@@ -30,26 +30,21 @@
     </div>
 
     <div class="imagebox">
-      <img id="bodyimage" src="images/body2.jpg" alt="body" usemap="#bodymap">
+      <div id='anchorbox'>
+        <a onclick="shoulderClick()" id='leftShoulder'></a>
+        <a onclick="shoulderClick()" id='rightShoulder'></a>
+        <a onclick="elbowClick()" id='leftElbow'></a>
+        <a onclick="elbowClick()" id='rightElbow'></a>
+        <a onclick="kneeClick()" id='leftKnee'></a>
+        <a onclick="kneeClick()" id='rightKnee'></a>
+        <a onclick="hipClick()" id='leftHip'></a>
+        <a onclick="hipClick()" id='rightHip'></a>
+        <img id="bodyimage" src="images/body2.jpg" alt="body" usemap="#bodymap">
+      </div>
     </div>
   </div>
-
-<map name="bodymap">
-    <div id="shoulder_click">
-  <area shape="rect" coords="180,140,360, 230" alt="body" onclick="shoulderClick()" id= "shoulder_box">
-    </div>
-    <div id="elbow_click">
-  <area shape="rect" coords="100, 230, 435, 300" alt="body" onclick="elbowClick()">
-    </div>
-    <div id="knee_click">
-  <area shape="rect" coords="160, 435, 400, 550" alt="body" onclick="kneeClick()">
-    </div>
-    <div id="hip_click">
-  <area shape="rect" coords="203, 340, 370, 390" alt="body" onclick="hipClick()">
-    </div>
- </map>
   <div class="rightside">
-      <h2> Patient Info</h2>
+    <h2> Patient Info</h2>
     <div id="info">
       <h4 id="age"></h4>
       <h4 id="weight"></h4>
@@ -60,26 +55,26 @@
       <div id="symptoms">
         <h2>Symptoms</h2>
         <textarea id="symptomsTextarea" class="textarea"
-          onfocus="$('#symptomPopup').css('display', 'block');"
-          placeholder="(Click here to enter text)" readonly>
-        </textarea>
-      </div>
-
-      <div id="other">
-        <h2>Other Findings</h2>
-        <textarea id="otherTextarea" class="textarea"
-          onfocus="$('#otherPopup').css('display', 'block')"
-          placeholder="(Click here to enter text)" readonly>
-        </textarea>
-      </div>
+        onfocus="$('#symptomPopup').css('display', 'block');"
+        placeholder="(Click here to enter text)" readonly>
+      </textarea>
     </div>
+
+    <div id="other">
+      <h2>Other Findings</h2>
+      <textarea id="otherTextarea" class="textarea"
+      onfocus="$('#otherPopup').css('display', 'block')"
+      placeholder="(Click here to enter text)" readonly>
+    </textarea>
   </div>
+</div>
+</div>
 
 <div id="symptomPopup" class="popupdiv">
   <div class="popup">
     <textarea id="Symptoms" class="textareaPopup"></textarea>
     <button class="saveButton"
-      onclick="$('#symptomPopup').css('display', 'none'); saveMedicalInfo('Symptoms');">Save</button>
+    onclick="$('#symptomPopup').css('display', 'none'); saveMedicalInfo('Symptoms');">Save</button>
   </div>
 </div>
 
@@ -87,13 +82,9 @@
   <div class="popup">
     <textarea id="OtherFindings" class="textareaPopup"></textarea>
     <button class="savebutton"
-      onclick="$('#otherPopup').css('display','none'); saveMedicalInfo('OtherFindings')">Save</button>
+    onclick="$('#otherPopup').css('display','none'); saveMedicalInfo('OtherFindings')">Save</button>
   </div>
 </div>
-
-<script>
-
-    </script>
 </body>
 
 </html>
