@@ -5,9 +5,6 @@ firebase.auth().onAuthStateChanged(function(user) {
     // User is signed in.
     physioUID = user.uid;
     var id = physioUID
-  } else {
-    // No user is signed in.
-    alert("nope");
   }
 
   //var name, email;

@@ -19,7 +19,7 @@
      <button class="navbutton"><a href="patientlist.html">← Back to Patient List</a></button> 
     </div>
     <div id="log_out">
-    <button class="sign_out">LOG OUT</button>
+    <button id="sign_out" onclick="sign_out_function()">LOG OUT</button>
     </div>
   </div>
 
@@ -30,10 +30,24 @@
     </div>
 
     <div class="imagebox">
-      <img id="bodyimage" src="images/body.jpg" alt="body">
+      <img id="bodyimage" src="images/body2.jpg" alt="body" usemap="#bodymap">
     </div>
   </div>
 
+<map name="bodymap">
+    <div id="shoulder_click"> 
+  <area shape="rect" coords="180,140,360, 230" alt="body" onclick="shoulderClick()" id= "shoulder_box">
+    </div>
+    <div id="elbow_click">
+  <area shape="rect" coords="100, 230, 435, 300" alt="body" onclick="elbowClick()">
+    </div>
+    <div id="knee_click">
+  <area shape="rect" coords="160, 435, 400, 550" alt="body" onclick="kneeClick()">
+    </div>
+    <div id="hip_click">
+  <area shape="rect" coords="203, 340, 370, 390" alt="body" onclick="hipClick()">
+    </div>
+ </map>
   <div class="rightside">
       <h2> Patient Info</h2>
     <div id="info">
@@ -79,7 +93,7 @@
     
 <script>
 
-</script>
+    </script>
 </body>
 
 </html>
