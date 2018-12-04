@@ -11,7 +11,7 @@
       }
       
       body {
-          background-color: #47476B;
+          background-color: #22232a;
           color: white;
           width: 100%;
           height: 100%:
@@ -38,7 +38,7 @@ captions {
       #navBar {
             width: 100%;
             height: 8em;
-            background-color: #29293d;
+            background-color: #33334d;
             align-content: center;
             display: grid;
           margin-top: 1em;
@@ -52,6 +52,13 @@ captions {
     width: 400px;
 }
 
+.rightside h2 {
+    margin-left: 10em;
+}
+
+#title {
+    margin-left: 5em;
+}
 #title h2 {
     font-size: 27pt;
     color: #289CCA;
@@ -66,35 +73,37 @@ captions {
 
 #back {
   float: left;
-  font-size: 18pt;
   margin: 0 0 0 1em;
-  background-color: #289CCA;
-  color: black;
-  padding: 16px;
-  font-size: 16px;
-  border: white solid 1px;
-  cursor: pointer;
-  border-radius: 24px;
-}
+    margin-left: 5em;
 }
 
 #back button {
-  background-color: #289CCA;
+ background-color: #289CCA;
   color: black;
-  padding: 16px;
-  font-size: 16px;
+  font-size: 18pt;
   border: white solid 1px;
   cursor: pointer;
   border-radius: 24px;
+    margin-top: 0.5em;
+}
+
+#back a:visited {
+    color: black;
+    text-shadow: 2px 2px 2px black;
 }
 
 #menu {
-    width: 95%;
+    width: 100%;
+    height: 3.5em;
     overflow: hidden;
-    padding: 0.5em;
     margin: auto;
-    background-color: #464866;
-    border: solid 2px #29648A;
+    background-color: #3C414F;
+    border-top: solid 2px #29648A;
+    border-bottom: solid 2px #29648A;/
+}
+
+a {
+    text-decoration: none;
 }
 
 #listcontainer {
@@ -114,28 +123,36 @@ td {
 }
 
 #patients {
-    background-color: #464866;
-    border: 1px solid #289CCA;
+    background-color: #3C414F;
+    border: 1px solid #29648A;
 }
 
 td button {
     background-color: #289CCA;
    line-height: 2em;
+    width: 40%;
+    color: black;
+}
+
+td a:visited {
+    color: black;
 }
 
 #log_out {
  float: right;
- font-size: 18pt;
- margin: 0 0 0 1em;    
+    width: 13%;
+    margin-left: -5em;
 }
 
 #log_out button {
-  background-color: #289CCA;
-  color: black;
-  padding: 16px;
-  font-size: 16px;
-  border: white solid 1px;
-  cursor: pointer;
-  border-radius: 24px;
+ font-size: 18pt;
+    width: 6em;
+    margin-top: 0.5em;
+    border-radius: 12px;
+    background-color: #289CCA;
+}
+
+#log_out a:visited {
+    color: black;
 }
 

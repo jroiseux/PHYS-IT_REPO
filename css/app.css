@@ -1,5 +1,5 @@
 body {
-    background-color: #2527AD;
+    background-color: #AAABB8;
 }
 
 .leftside {
@@ -22,7 +22,7 @@ body {
 
 #info {
     border: solid 3px #29648A;
-    background-color: #464866;
+    background-color: #3C414F;
 }
 
 #info h4 {
@@ -36,7 +36,11 @@ body {
 
 #bodyimage {
   max-width: 100%;
+<<<<<<< HEAD
   border: solid 5px #29648A;
+=======
+    border: solid 4px #289CCA;
+>>>>>>> f9c81372797ea0e14005026f06be5772c1b2da29
 }
 
 #patientimage {
@@ -179,38 +183,38 @@ body {
 }
 
 #menu {
-    width: 95%;
+    width: 100%;
+    height: 3.5em;
     overflow: hidden;
-    padding: 0.5em;
     margin: auto;
-    background-color: #464866;
-    border: solid 2px #29648A;
+    background-color: #3C414F;
+    border-top: solid 2px #29648A;
+    border-bottom: solid 2px #29648A;
 }
 
 #patientimage {
-    border: solid 5px #29648A;
+    border: solid 3px #29648A;
 }
 
 #back {
   float: left;
-  font-size: 18pt;
   margin: 0 0 0 1em;
+    margin-left: 4em;
 }
 
 #back button {
   background-color: #289CCA;
   color: black;
-  padding: 16px;
-  font-size: 16px;
+  font-size: 18pt;
   border: white solid 1px;
   cursor: pointer;
   border-radius: 24px;
+    margin-top: 0.5em;
 }
 
 #log_out {
  float: right;
- font-size: 18pt;
- margin: 0 0 0 1em;    
+ width: 12%;
 }
 
 #log_out button {
@@ -221,6 +225,12 @@ body {
     background-color: #289CCA;
 }
 
+<<<<<<< HEAD
+=======
+a {
+    text-decoration: none;
+}
+>>>>>>> f9c81372797ea0e14005026f06be5772c1b2da29
 
 #back a:visited {
     color: black;
@@ -244,7 +254,7 @@ body {
 
 #exerciseList {
     font-size: 15pt;
-    background-color: #464866;
+    background-color: #3C414F;
     border: 1px solid #289CCA;
     padding: 0.5em;
 }
