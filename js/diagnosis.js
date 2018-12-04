@@ -10,7 +10,7 @@ patientList.on('value', function(snap) {
 });
 
 function displayList() {
-  var ref = firebase.database().ref("exercises/knee");
+  var ref = firebase.database().ref("exercises/" + bodyPart);
   ref.on(
     "value",
     function(snap) {
@@ -78,7 +78,7 @@ function displayList() {
 
 function setImage() {
     if (bodyPart === 'shoulder'){
-    $("#patientimage").attr("src", "images/shoulder.jpg");  
+    $("#patientimage").attr("src", "images/shoulder.jpg");
     }
     else if (bodyPart === 'knee'){
     $("#patientimage").attr("src", "images/knee.jpg");
@@ -94,9 +94,7 @@ function setImage() {
     displayText('Diagnosis', 'diagnosisTextarea');
     displayText('Diagnosis', 'Diagnosis');
     displayList();
-    setImage(); 
-    //displayText('Exercises', 'exercisesTextarea');
-    //displayText('Exercises', 'Exercises');
+    setImage();
     displayExercises();
 
   });

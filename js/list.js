@@ -17,10 +17,9 @@ firebase.auth().onAuthStateChanged(function(user) {
   }
 
   var ref = firebase.database().ref("Users/" + physioUID);
-  ref.on(
+  ref.once(
     "value",
     function(snap) {
-
       snap.forEach(function(snapshot){
         var patientid = snapshot.key;
         console.log(patientid)

@@ -1,27 +1,27 @@
 
   @import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
-      
+
       #patients {
           width: 100%;
       }
-      
+
       html {
           width: 100%;
           height: 100%;
       }
-      
+
       body {
           background-color: #22232a;
           color: white;
           width: 100%;
           height: 100%:
       }
-      
+
       body h1 {
           text-shadow: black 2px 2px 2px;
           font-family: 'Roboto Slab', serif;
       }
-      
+
       body tr td {
           font-family: 'Roboto Slab', serif;
           text-shadow: black 2px 2px 2px;
@@ -34,7 +34,7 @@ body tr td b {
 captions {
     font-weight: bold;
 }
-      
+
       #navBar {
             width: 100%;
             height: 8em;
@@ -44,7 +44,7 @@ captions {
           margin-top: 1em;
 
         }
-      
+
       #navBar img {
     text-align: center;
     margin: auto;
@@ -130,7 +130,6 @@ td {
 td button {
     background-color: #289CCA;
    line-height: 2em;
-    width: 40%;
     color: black;
 }
 
@@ -155,4 +154,3 @@ td a:visited {
 #log_out a:visited {
     color: black;
 }
-
