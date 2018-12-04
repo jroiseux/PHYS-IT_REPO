@@ -29,6 +29,10 @@
   left: 32%;
 }
 
+.imagebox {
+    text-align: center;
+}
+
 #rightShoulder {
   top: 15%;
   left: 52%;
