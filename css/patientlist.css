@@ -56,6 +56,9 @@ captions {
     margin-left: 10em;
 }
 
+#title {
+    margin-left: 5em;
+}
 #title h2 {
     font-size: 27pt;
     color: #289CCA;
@@ -71,6 +74,7 @@ captions {
 #back {
   float: left;
   margin: 0 0 0 1em;
+    margin-left: 5em;
 }
 
 #back button {
@@ -136,7 +140,8 @@ td a:visited {
 
 #log_out {
  float: right;
- margin: 0 0 0 1em;    
+    width: 13%;
+    margin-left: -5em;
 }
 
 #log_out button {
