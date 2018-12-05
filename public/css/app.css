@@ -1,9 +1,15 @@
+/** CSS for all html files */
+
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+
+/** Dimensions of the html document */
 
 html {
   height: 100%;
   width: 100%;
 }
+
+/** Dimensions of the body document */
 
 body {
   height: 100%;
@@ -12,17 +18,22 @@ body {
   color: white;
 }
 
+/** For all h2 elements in the body */
+
 body h2 {
   text-shadow: 2px 2px 2px black;
   font-family: 'Roboto Slab', serif;
 }
 
+/** Global div holding the logo for the the pages */
 #navBar {
   position: relative;
   width: 100%;
   height: 8em;
   margin-top: 1em;
 }
+
+/** The logo and title of our APP */
 
 #navBar img {
   position: absolute;
@@ -31,12 +42,16 @@ body h2 {
   height: 100%;
 }
 
+/** The div containing the left side for diagnosis.html and patientprofile.html */
+
 .leftside {
   box-sizing: border-box;
   width: 50%;
   float: left;
   padding: 0 2em 1em 4em;
 }
+
+/** The div containing the right side for diagnosis.html and patientprofile.html */
 
 .rightside {
   box-sizing: border-box;
@@ -45,9 +60,13 @@ body h2 {
   padding: 0 4em 1em 2em;
 }
 
+/** All the h2 elements on the right side of the diagnosis.html and patientprofile.html pages (th headers "Diagnosis", "Symptoms", "Other Findings, and "Exercises") */
+
 .rightside h2 {
   font-size: 22pt;
 }
+
+/** Styling of the text areas in the html documents */
 
 .textarea {
   width: 100%;
@@ -55,6 +74,8 @@ body h2 {
   font-size: 13pt;
   border: solid 3px #29648A;
 }
+
+/** Divs for the respective pop-ups of our text boxes */
 
 .popupdiv {
   z-index: 1;
@@ -66,6 +87,8 @@ body h2 {
   top: 0;
 }
 
+/** Div class containing the text pop-up and save button in html documents */
+
 .popup {
   height: 35%;
   width: 50%;
@@ -73,23 +96,33 @@ body h2 {
   transform: translate(0, 90%);
 }
 
+/** Class for all the textareas of our specific pop-ups in html documents */
+
 .textareaPopup {
   width: 100%;
   height: 100%;
 }
 
+/** Div containing the spans which are used to pull from the database corresponding to the patient's name */
+
 #patientname {
   width: 100%;
 }
+
+/** Header describing the patient name on patientprofile.html and diagnosis.html */
 
 #patientname h2 {
   text-align: center;
   font-size: 30pt;
 }
 
+/** Class for the pop-up of text areas */
+
 .textareaPopup {
   font-size: 18pt;
 }
+
+/** Div that contains the back button, print, and log-out buttons */
 
 #menu {
   width: 100%;
@@ -101,6 +134,8 @@ body h2 {
   border-bottom: solid 2px #29648A;
 }
 
+/** The div for our nav bar */
+
 #back {
   float: left;
   margin: 0 0 0 2em;
@@ -108,6 +143,8 @@ body h2 {
   top: 50%;
   transform: translateY(-50%);
 }
+
+/** Styling the buttons within our back button */
 
 #back button {
   background-color: #289CCA;
@@ -118,15 +155,18 @@ body h2 {
   border-radius: 0.5em;
 }
 
+/** Changing the colour of text in our anchor elements of the back buttons that return you to the previous page within the nav bar */
 #back a {
   color: black;
 }
 
+/** Changing the colour of visited links in our pages */
 #back a:visited {
   color: black;
   text-shadow: 2px 2px 2px black;
 }
 
+/** The div containing the log out button for the pages */
 #log_out {
   float: right;
   margin: 0 2em 0 0;
@@ -135,6 +175,7 @@ body h2 {
   transform: translateY(-50%);
 }
 
+/** The log out button for the pages */
 #log_out button {
   font-size: 18pt;
   width: 6em;
@@ -142,10 +183,13 @@ body h2 {
   background-color: #289CCA;
 }
 
+/** Styling for all anchor elements on the pages to not include underlines */
+
 a {
   text-decoration: none;
 }
 
+/** Styling of the save buttons in our text pop-ups */
 .popup button {
   font-size: 18pt;
   margin: auto;

@@ -36,8 +36,10 @@
 
   <div class="leftside" id="diagnosisLeftSide">
     <div id="patientname">
+<!--        Patient Name and Last Name grabbed from firebase-->
       <h2><span id="firstName"></span> <span id="lastName"></span></h2>
     </div>
+<!--      Images from database inputted into this div-->
     <div class="imagebox">
  <img id="patientimage" src="https://dummyimage.com/500x600/000/fff">
     </div>
@@ -55,9 +57,11 @@
 
     <div id="exercises">
       <h2>Exercises</h2>
+<!--        List of exercises where exericses from the database are stored when called-->
       <div id="exerciseList"></div>
       <div class="dropdown">
         <button class="dropbtn">Add New Exercise</button>
+<!--          List of preset exercises from the data are within here-->
         <div class="dropdown-content"></div>
       </div>
     </div>

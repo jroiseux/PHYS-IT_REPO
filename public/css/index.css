@@ -1,7 +1,11 @@
+/** CSS for index.html */
+
+/** Div containing a div with the banner */
 .top_banner {
   overflow: hidden;
 }
 
+/** Div containing the banner of the page */
 .banner_container {
   background: url("../images/Banner.png") repeat-x;
     filter: brightness(60%);
@@ -10,6 +14,7 @@
   animation: slide 60s linear infinite;
 }
 
+/** Animation for the banner of the page */
 @keyframes slide {
   0% {
     transform: translate3d(0, 0, 0);
@@ -20,6 +25,7 @@
   }
 }
 
+/** Firebase log-in entry */
 #firebaseui-auth-container {
   font-family: 'Roboto Slab', serif;
     padding: 6em 0em;
@@ -30,19 +36,10 @@
     display: grid;
 }
 
+/** Loader div that is displayed once logging in */
 #loader {
   margin-top: 4em;
   font-family: 'Roboto Slab', serif;
-}
-
-#triangle-topright {
-      width: 75%;
-      height: 30em;
-      border-top: 300px solid red;
-      border-left: 400px solid transparent;
-    }
-
-#loader {
-    width: 100%;
+     width: 100%;
     height: 10em;
 }

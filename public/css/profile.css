@@ -1,21 +1,28 @@
+/** CSS for patientprofile.html */
+
+/** Text-pop up for the symptoms box */
 #symptomPopup {
   display: none;
 }
 
+/** Text-pop up for the other findings box */
 #otherPopup {
   display: none;
 }
 
+/** Image for the overall body picture */
 #bodyimage {
   width: 100%;
   border: solid 3px #29648A;
 }
 
+/** Div for all the clickable elements */
 #anchorbox {
   position: relative;
   display: inline-block;
 }
 
+/** All the clickable elements */
 #anchorbox a {
   position: absolute;
   width: 15%;
@@ -24,51 +31,60 @@
   cursor: pointer;
 }
 
+/** Anchor element for the clickable left shoulder */
 #leftShoulder {
   top: 15%;
   left: 32%;
 }
 
+/** Class for the clickable area of the picture */
 .imagebox {
     text-align: center;
 }
 
+/** Anchor element for the clickable right shoulder */
 #rightShoulder {
   top: 15%;
   left: 52%;
 }
 
+/** Anchor element for the clickable left elbow */
 #leftElbow {
   top: 30%;
   left: 25%;
 }
 
+/** Anchor element for the clickable left elbow */
 #rightElbow {
   top: 30%;
   left: 60%;
 }
 
+/** Anchor element for the clickable left hip */
 #leftHip {
   top: 37%;
   left: 36%;
 }
 
+/** Anchor element for the clickable right hip */
 #rightHip {
   top: 37%;
   left: 48%;
 }
 
+/** Anchor element for the clickable left knee */
 #leftKnee {
   top: 60%;
   left: 32%;
 }
 
+/** Anchor element for the clickable right knee */
 #rightKnee {
   top: 60%;
   left: 52%;
 }
 
-
+/** Div for the "Patient Info" section
 #info {
   box-sizing: border-box;
   padding: 0.618em;
@@ -77,6 +93,7 @@
 
 }
 
+/** The information for the "Patient Info" section */
 #info h4 {
   font-family: 'Roboto Slab', serif;
   font-size: 16pt;

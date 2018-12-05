@@ -1,3 +1,7 @@
+/* CSS for the patientlist.html */
+
+
+/** Table including the list of patients */
 #patients {
   width: 100%;
   background-color: #3C414F;
@@ -5,33 +9,25 @@
   padding: 1em;
 }
 
-body h1 {
-  text-shadow: black 2px 2px 2px;
-  font-family: 'Roboto Slab', serif;
-}
-
+/** Giving the td elements text shadows */
 body tr td {
   font-family: 'Roboto Slab', serif;
   text-shadow: black 2px 2px 2px;
 }
 
-body tr td b {
-  font-size: 15pt;
-}
-
-captions {
-  font-weight: bold;
-}
-
+/** Div containing the "Patient List" header
 #title {
   margin-left: 5em;
 }
+
+/** Header for "Patient List" */
 #title h2 {
   font-size: 27pt;
   color: #289CCA;
   text-shadow: black 1px 1px 1px;
 }
 
+/**  View buttons in the patient list area */
 #patients button {
   font-size: 15pt;
   border-radius: 11px;
@@ -41,16 +37,19 @@ captions {
   color: black;
 }
 
+/** Anchor elements in the page */
 a {
   text-decoration: none;
   color: black;
 }
 
+/** Div containing the list of patients */
 #listcontainer {
   width: 90%;
   margin: auto;
 }
 
+/** Referencing just the categorizing td elements in the table (First Name, Last Name, etc) */
 #titles {
   padding-bottom: 0.618em;
   font-weight: bold;
@@ -58,10 +57,12 @@ a {
   color: #289CCA;
 }
 
+/** Changing the size of the td elements int he table */
 td {
   font-size: 18pt;
 }
 
+/** Changing the colour of the button text to black */
 td a:visited {
   color: black;
 }
