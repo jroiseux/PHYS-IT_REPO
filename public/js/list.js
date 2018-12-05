@@ -1,3 +1,5 @@
+//JavaScript file for the patientlist.html file.
+//The app autenticates the user.
 var physioUID;
 
 firebase.auth().onAuthStateChanged(function(user) {
@@ -16,6 +18,8 @@ firebase.auth().onAuthStateChanged(function(user) {
     uid = user.uid;
   }
 
+  /*Display all the user's patients from the database and add them to the table
+  in the patient list*/
   var ref = firebase.database().ref("Users/" + physioUID);
   ref.once(
     "value",

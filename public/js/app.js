@@ -1,3 +1,6 @@
+//JavaScript file for features that are used multiple times throughout
+//the application.
+
 // Initialize Firebase
 var config = {
   apiKey: "AIzaSyBHkznc6I46EAtk3L8bKm3h3t2Yx9NUyZI",
@@ -9,44 +12,27 @@ var config = {
 };
 firebase.initializeApp(config);
 
+//Displays the text from the database in the text areas.
 function displayText(key, textareaid) {
   var ref = firebase.database()
-    .ref("Patients/" + patientid + "/MedicalInfo/" + key);
+  .ref("Patients/" + patientid + "/MedicalInfo/" + key);
   ref.on('value', function(snap) {
     $('#' + textareaid).val(snap.val());
   });
 };
 
+//Saves Symptoms and Other Findings to the database.
 function saveMedicalInfo(key) {
   var text = $('#' + key).val();
   firebase.database()
-    .ref("Patients/" + patientid + "/MedicalInfo")
-    .update({
-      [key]: text
-    });
+  .ref("Patients/" + patientid + "/MedicalInfo")
+  .update({
+    [key]: text
+  });
 };
 
+//The log-out function for the application.
 function sign_out_function(){
-location.href="./index.html";
-firebase.auth().signOut()
-};
-
-function kneeClick() {
-    localStorage.setItem('bodypart', 'knee');
-    window.location = "diagnosis.html?knee";
-};
-
-function shoulderClick() {
-    localStorage.setItem('bodypart', 'shoulder');
-    window.location = "diagnosis.html?shoulder";
-};
-
-function elbowClick() {
-    localStorage.setItem('bodypart', 'elbow');
-    window.location = "diagnosis.html?elbow";
-};
-
-function hipClick() {
-    localStorage.setItem('bodypart', 'hip');
-    window.location = "diagnosis.html?hip";
+  location.href="./index.html";
+  firebase.auth().signOut()
 };
